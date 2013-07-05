@@ -1,0 +1,4 @@
+结合strut、Hibernate第一次尝试
+1、添加了strut-tags的jsp都应该在filter中加入strut
+2.strut 中action重定向到另一个action 用redirectAcion，用 redirect ，然后 next.action （书本上的例子) 不知道为啥
+3.有个错误需要把strut 下的an开头的包删掉，防止与hibernate的高版本冲突

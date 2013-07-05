@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 
+
 public class ProductDAOImpl implements ProductDao{
 
 	public void save(Product p) {
@@ -21,7 +22,7 @@ public class ProductDAOImpl implements ProductDao{
 		// TODO Auto-generated method stub
 		Session session=HibernateUtil.getSession();
 		session.beginTransaction();
-		String hql="delelte Product where id=?";
+		String hql="delete Product as pro where pro.id=?";
 		Query query=session.createQuery(hql);
 		query.setString(0,id);
 		query.executeUpdate();
@@ -42,7 +43,7 @@ public class ProductDAOImpl implements ProductDao{
 	public List queryAll() {
 		// TODO Auto-generated method stub
 		Session session=HibernateUtil.getSession();
-		String hql="from product ";
+		String hql="from Product";
 		Query query=session.createQuery(hql);
 		List result=query.list();
 		HibernateUtil.closeSession(session);
@@ -53,7 +54,7 @@ public class ProductDAOImpl implements ProductDao{
 	public Product queryById(String id) {
 		// TODO Auto-generated method stub
 		Session session=HibernateUtil.getSession();
-		String hql="from product where id=?";
+		String hql="from Product as pro where pro.id=?";
 		Query query=session.createQuery(hql);
 		query.setString(0, id);
 		List result=query.list();

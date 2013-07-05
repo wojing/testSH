@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@taglib prefix="s"	uri="/struts-tags" %>
+<%@ taglib prefix="s"	uri="/struts-tags" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -38,14 +38,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				<tr>
   					<td><s:property value="#product.id"/></td>
   					<td><s:property value="#product.name"/></td>
-  					<td><s:property value="#prodct.price"/></td>
+  					<td><s:property value="#product.price"/></td>
   					<td><a href="delete.action?id=<s:property value='#product.id'/>">删除</a></td>
   					<td><a href="update.jsp?id=<s:property value='#product.id'/>">更新</a></td>
   				</tr>
   				</s:iterator>
   				
   		</table>
-  		<a href="add.jsp">添加产品</a>
+  		<a href="addProduct.jsp">添加产品</a>
   	</center>
   </body>
 </html>

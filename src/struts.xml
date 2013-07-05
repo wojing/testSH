@@ -6,4 +6,19 @@
 		<action name="showAll"
 			class="com.testSH.action.ShowAllAction">
 			<result name="success">/showALL.jsp</result>
-		</action></package></struts>    
+		</action>
+		<action name="add"
+			class="com.testSH.action.AddAction">
+			<!-- 原来用redirect、showAll.action 说不行？点解？ -->
+			<result name="success" type="redirectAction">showAll</result>
+		</action>
+		<action name="delete"
+			class="com.testSH.action.DeleteAction">
+			<result name="success" type="redirectAction">showAll</result>
+		</action>
+		<action name="update"
+			class="com.testSH.action.UpdateProductAction">
+			<result name="success" type="redirectAction">showAll</result>
+		</action>
+		</package>
+	</struts>    

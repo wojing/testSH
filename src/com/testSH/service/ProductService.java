@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.testSH.factory.Product;
 
+
 public interface ProductService {
 	public void addProduct(Product p);
 	public void delProduct(String id);

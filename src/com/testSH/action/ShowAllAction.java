@@ -15,5 +15,4 @@ public class ShowAllAction extends ActionSupport {
 		return SUCCESS;
 		
 	}
-	
 }
